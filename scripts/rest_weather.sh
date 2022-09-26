@@ -4,9 +4,8 @@ if [[ ! -d ~/.cache/weather/ ]]; then
 mkdir ~/.cache/weather/
 fi
 
-rm -f ~/.cache/weather/*
 
-curl wttr.in/?format=j1 -s -o weather.json
+curl wttr.in/?format=j1 -s -o $HOME/.cache/weather.json
 
 #сегодня
 code=$(cat weather.json | jq -r '.weather[0].hourly[2].weatherCode')
