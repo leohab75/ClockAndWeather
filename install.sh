@@ -1,7 +1,5 @@
 #!/bin/bash
 
-echo $(pwd)
-
 
 if [[ ! -d $HOME/.conky ]]; then
     mkdir $HOME/.conky
